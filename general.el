@@ -18,13 +18,23 @@
 (global-set-key (kbd "H-x") 'next-buffer)
 (global-set-key (kbd "H-z") 'previous-buffer)
 (global-set-key (kbd "H-b") 'list-buffers)
+
+;; Some other fn randoms
 (global-set-key (kbd "H-c") 'scroll-lock-mode)
 (global-set-key (kbd "H-k") 'kill-buffer)
 (global-set-key (kbd "H-f") 'find-file)
 
+;; move the cursor to the pane -- HIGHLY DISCOURAGED EVERYWHERE
+;;(global-set-key (kbd "H-right") 'windmove-right)
+;;(global-set-key (kbd "H-left") 'windmove-left)
+;;(global-set-key (kbd "H-up") 'windmove-left)
+;;(global-set-key (kbd "H-down") 'windmove-left)
+
+;; Shift-right on rightmost pane should focus on iTerm2
+(global-set-key (kbd "S-<right>") 'iterm-from-windmove)
 
 ;; Define - Redo shortcut
-(global-set-key (kbd "s-Z") 'undo-tree-redo) . (Z = SHIFT + z).
+(global-set-key (kbd "s-Z") 'undo-tree-redo) ;;. (Z = SHIFT + z).
 
 ;; Clear Read-Only Buffers
 (defun comint-clear-buffer ()
@@ -36,3 +46,5 @@
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
 
 
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
