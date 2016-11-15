@@ -23,9 +23,9 @@
   (interactive)
   (condition-case err
       (windmove-right)
-
-    
-  ;; (setq movemsg )
-  (message "kot fare")
-  (message movemsg)
-  )
+    (error
+     (if (string= (error-message-string err) "No window right from selected window")
+         (iterm-goto-filedir-or-home))
+     (message "%s" (error-message-string err))))
+  ;;(message movemsg)
+)
