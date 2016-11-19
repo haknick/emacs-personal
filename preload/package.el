@@ -7,7 +7,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/") t)
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("popkit" . "http://elpa.popkit.org/packages/"))
+;;(add-to-list 'package-archives '("popkit" . "http://elpa.popkit.org/packages/"))
 (package-refresh-contents)
 (package-initialize)
 
@@ -26,6 +26,13 @@
 
 (use-package neotree
    :ensure neotree)
+
+(use-package cider
+  :ensure fsharp-mode)
+
+(use-package clj-refactor
+  :ensure fsharp-mode)
+
 
 ;(use-package
 ;   :ensure )
