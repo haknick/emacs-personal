@@ -4,7 +4,7 @@
 ;;(setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
 ;; move border!
-(load "~/.emacs.d/personal/vendor/move-border")
+(load "~/.emacs.d/vendor/move-border" )
 (require 'move-border)
 ;;; Code
 (global-set-key (kbd "C-s-<up>") 'move-border-up)
@@ -24,6 +24,14 @@
 (global-set-key (kbd "H-k") 'kill-buffer)
 (global-set-key (kbd "H-f") 'find-file)
 
+;; move the cursor to the pane -- HIGHLY DISCOURAGED EVERYWHERE
+;;(global-set-key (kbd "H-right") 'windmove-right)
+;;(global-set-key (kbd "H-left") 'windmove-left)
+;;(global-set-key (kbd "H-up") 'windmove-left)
+;;(global-set-key (kbd "H-down") 'windmove-left)
+
+;; Shift-right on rightmost pane should focus on iTerm2
+(global-set-key (kbd "S-<right>") 'iterm-from-windmove)
 
 ;; Define - Redo shortcut
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
