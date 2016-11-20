@@ -21,8 +21,8 @@
 (package-initialize)
 
 ;;; Expand-region
-(use-package fsharp-mode
-   :ensure fsharp-mode)
+;;(use-package fsharp-mode
+;;   :ensure fsharp-mode)
 
 (use-package neotree
    :ensure neotree)
