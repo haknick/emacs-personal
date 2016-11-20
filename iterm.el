@@ -1,5 +1,3 @@
-
-
 (defun iterm-goto-filedir-or-home ()
   "Go to present working dir and focus iterm"
   (interactive)
@@ -14,9 +12,14 @@
     "   end tell\n"
     " end tell\n"
     " do shell script \"open -a iTerm\"\n"
-      ))
-    )
+    ))
+  )
 
+(defun iterm-goto-current ()
+  "Go to present working dir and focus iterm"
+  (interactive)
+  (do-applescript
+   (concat " do shell script \"open -a iTerm\"\n" )))
 
 (defun iterm-from-windmove ()
   "on rightmost S-right (shift - arrow right) open iTerm2"
@@ -25,7 +28,5 @@
       (windmove-right)
     (error
      (if (string= (error-message-string err) "No window right from selected window")
-         (iterm-goto-filedir-or-home))
-     (message "%s" (error-message-string err))))
-  ;;(message movemsg)
-)
+         (iterm-goto-current))
+     (message "%s" (error-message-string err)))))

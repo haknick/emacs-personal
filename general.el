@@ -4,7 +4,7 @@
 ;;(setq ns-function-modifier 'hyper)  ; make Fn key do Hyper
 
 ;; move border!
-(load "~/.emacs.d/vendor/move-border" )
+(load "~/.emacs.d/personal/vendor/move-border" )
 (require 'move-border)
 ;;; Code
 (global-set-key (kbd "C-s-<up>") 'move-border-up)
