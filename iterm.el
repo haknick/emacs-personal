@@ -18,8 +18,7 @@
 (defun iterm-goto-current ()
   "Go to present working dir and focus iterm"
   (interactive)
-  (do-applescript
-   (concat " do shell script \"open -a iTerm\"\n" )))
+  (do-applescript "tell application \"iTerm\" to activate"))
 
 (defun iterm-from-windmove ()
   "on rightmost S-right (shift - arrow right) open iTerm2"
