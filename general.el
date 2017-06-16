@@ -44,3 +44,5 @@
 
 ;; let's bind the new command to a keycombo
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
+
+(global-whitespace-mode nil)
