@@ -27,11 +27,11 @@
 (use-package neotree
    :ensure neotree)
 
-(use-package cider
-  :ensure fsharp-mode)
+;; (use-package cider
+;;   :ensure fsharp-mode)
 
-(use-package clj-refactor
-  :ensure fsharp-mode)
+;; (use-package clj-refactor
+;;   :ensure fsharp-mode)
 
 
 ;(use-package

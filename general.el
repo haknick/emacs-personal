@@ -36,13 +36,4 @@
 ;; Define - Redo shortcut
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 
-;; Clear Read-Only Buffers
-(defun comint-clear-buffer ()
-  (interactive)
-  (let ((comint-buffer-maximum-size 0))
-    (comint-truncate-buffer)))
-
-;; let's bind the new command to a keycombo
-(define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
-
 (global-whitespace-mode nil)
