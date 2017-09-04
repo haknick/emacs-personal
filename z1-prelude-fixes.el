@@ -1,10 +1,8 @@
 ;; ==== FIXES TO ORIGINAL PRELUDE BEHAVIOR ====
 
-(setq prelude-whitespace nil)
-(global-whitespace-mode nil)
-(setq global-whitespace-mode nil)
-(add-hook 'window-setup-hook (lambda () (global-whitespace-mode nil)))
-;;(add-hook 'window-setup-hook #'global-whitespace-mode)
+;;(global-whitespace-mode nil)
+;;(setq global-whitespace-mode nil)
+(add-hook 'window-setup-hook (lambda () (prelude-whitespace nil)))
 
 
 ;; Clear Read-Only Buffers
