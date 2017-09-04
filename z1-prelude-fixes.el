@@ -1,6 +1,11 @@
 ;; ==== FIXES TO ORIGINAL PRELUDE BEHAVIOR ====
 
+(setq prelude-whitespace nil)
 (global-whitespace-mode nil)
+(setq global-whitespace-mode nil)
+(add-hook 'window-setup-hook (lambda () (global-whitespace-mode nil)))
+;;(add-hook 'window-setup-hook #'global-whitespace-mode)
+
 
 ;; Clear Read-Only Buffers
 (defun comint-clear-buffer ()
@@ -10,3 +15,5 @@
 
 ;; let's bind the new command to a keycombo
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
+
+(show-paren-mode +1)
