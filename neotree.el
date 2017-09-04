@@ -3,3 +3,4 @@
   "*Specifies the width of the NeoTree window."
   :type 'integer
   :group 'neotree)
+
