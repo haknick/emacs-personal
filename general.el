@@ -19,8 +19,10 @@
 (global-set-key (kbd "H-x") 'next-buffer)
 (global-set-key (kbd "H-z") 'previous-buffer)
 (global-set-key (kbd "H-b") 'list-buffers)
-(
- global-set-key (kbd "H-c") 'scroll-lock-mode)
+
+(global-set-key (kbd "H-n") 'neotree-change-root)
+
+(global-set-key (kbd "H-c") 'scroll-lock-mode)
 (global-set-key (kbd "H-k") 'kill-buffer)
 (global-set-key (kbd "H-f") 'find-file)
 
