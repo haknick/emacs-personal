@@ -38,4 +38,4 @@
 ;; Define - Redo shortcut
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 
-;;(set global-whitespace-mode nil)
+;;(global-set-key (kbd "C-x g") 'undo-tree-redo)

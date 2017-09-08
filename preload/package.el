@@ -47,6 +47,10 @@
   :ensure company-tern)
 ;;(require 'company-mode)
 
+;; ---- ivy (typeahead completions) ----
+(use-package ivy
+  :ensure ivy)
+
 
 ;; (use-package
 ;;   :ensure )

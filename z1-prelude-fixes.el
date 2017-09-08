@@ -15,3 +15,5 @@
 (define-key comint-mode-map "\C-c\M-o" #'comint-clear-buffer)
 
 (show-paren-mode +1)
+
+
