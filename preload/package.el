@@ -41,6 +41,11 @@
 (use-package xref-js2
   :ensure xref-js2)
 
+;; This is nice but can't get it to work with js2-mode
+;;(use-package prettier-js
+;; :ensure prettier-js)
+;;(prettier-js-mode 0)
+
 ;; ---- company-mode and tern ----
 ;; https://emacs.cafe/emacs/javascript/setup/2017/05/09/emacs-setup-javascript-2.html
 (use-package company-tern
@@ -50,6 +55,7 @@
 ;; ---- ivy (typeahead completions) ----
 (use-package ivy
   :ensure ivy)
+(ivy-mode 1)
 
 
 ;; (use-package

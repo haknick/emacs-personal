@@ -19,6 +19,10 @@
 (global-set-key (kbd "H-x") 'next-buffer)
 (global-set-key (kbd "H-z") 'previous-buffer)
 (global-set-key (kbd "H-b") 'list-buffers)
+;;(global-set-key (kbd "<triple-wheel-right>") 'next-buffer)
+;;(global-set-key (kbd "<triple-wheel-left>") 'previous-buffer)
+;;(global-set-key (kbd "<double-wheel-right>") 'next-buffer)
+;;(global-set-key (kbd "<double-wheel-left>") 'previous-buffer)
 
 (global-set-key (kbd "H-n") 'neotree-change-root)
 

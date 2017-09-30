@@ -1,7 +1,7 @@
 ;; ==== FIXES TO ORIGINAL PRELUDE BEHAVIOR ====
 
-;;(global-whitespace-mode nil)
-;;(setq global-whitespace-mode nil)
+(global-whitespace-mode nil)
+(setq global-whitespace-mode nil)
 (add-hook 'window-setup-hook (lambda () (prelude-whitespace nil)))
 
 
