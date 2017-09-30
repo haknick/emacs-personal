@@ -17,3 +17,9 @@
 (show-paren-mode +1)
 
 
+;; fix issues with 'mode line' or frame-title-format
+(setq mode-line-format
+      (list
+       "%m: " ;`mode-name'
+       ;; buffer, line, fullpath
+       "%b, line %l"))
