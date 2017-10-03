@@ -1,11 +1,12 @@
 ;; ==== FIXES TO ORIGINAL PRELUDE BEHAVIOR ====
 
-(global-whitespace-mode nil)
-(setq global-whitespace-mode nil)
-(add-hook 'window-setup-hook (lambda () (prelude-whitespace nil)))
+;;(global-whitespace-mode nil)
+;;(whitespace-mode nil)
+;;(add-hook 'window-setup-hook (lambda () (whitespace-mode nil)))
 
 
 ;; Clear Read-Only Buffers
+
 (defun comint-clear-buffer ()
   (interactive)
   (let ((comint-buffer-maximum-size 0))
@@ -16,10 +17,9 @@
 
 (show-paren-mode +1)
 
-
-;; fix issues with 'mode line' or frame-title-format
-(setq mode-line-format
-      (list
-       "%m: " ;`mode-name'
-       ;; buffer, line, fullpath
-       "%b, line %l"))
+(add-hook 'window-setup-hook
+          (lambda () (setq-default mode-line-format
+                           (list
+                            "%m: " ;`mode-name'
+                            ;; buffer, line, fullpath
+                            "%b, line %l"))))
