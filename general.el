@@ -43,3 +43,5 @@
 (global-set-key (kbd "s-Z") 'undo-tree-redo)
 
 ;;(global-set-key (kbd "C-x g") 'undo-tree-redo)
+
+(global-set-key (kbd "H-j") 'xref-find-definitions-other-frame)
