@@ -5,8 +5,8 @@
   :group 'neotree)
 
 
-;; Do now show neotree hidden files
-'(neo-show-hidden-files t)
+;; always show neotree hidden files
+'(setq-default neo-show-hidden-files t)
 
 (add-hook 'after-init-hook #'neotree-toggle)
 

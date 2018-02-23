@@ -41,16 +41,21 @@
 (use-package xref-js2
   :ensure xref-js2)
 
+;; major mode for editing web templates
+(use-package web-mode
+  :ensure web-mode)
+
 ;; This is nice but can't get it to work with js2-mode
 ;;(use-package prettier-js
 ;; :ensure prettier-js)
 ;;(prettier-js-mode 0)
 
-;; ---- company-mode and tern ----
-;; https://emacs.cafe/emacs/javascript/setup/2017/05/09/emacs-setup-javascript-2.html
-(use-package company-tern
-  :ensure company-tern)
-;;(require 'company-mode)
+;; ---- flycheck mode ----
+;; http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
+(use-package flycheck
+  :ensure flycheck
+  :init (global-flycheck-mode))
+(require 'flycheck)
 
 ;; ---- ivy (typeahead completions) ----
 (use-package ivy
