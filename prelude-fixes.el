@@ -21,5 +21,7 @@
           (lambda () (setq-default mode-line-format
                            (list
                             "%m: " ;`mode-name'
-                            ;; buffer, line, fullpath
-                            "%b, line %l"))))
+                            ;; buffer fullpath, line,
+                            "%b, line %l"
+                            " - width: "
+                            (window-total-width)))))

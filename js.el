@@ -18,7 +18,7 @@
 (add-hook 'js2-mode-hook (lambda () (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
 ;; make sure space indentation for js2-mode is set here
 ;; ideally this should come from eslint but don't know how to do that yet
-(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 4)))
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
 
 
 ;; === Taken from: http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html ===
@@ -64,3 +64,26 @@
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+
+;; setup tide
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+;; formats the buffer before saving
+;;(add-hook 'before-save-hook 'tide-format-before-save)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+
+
+

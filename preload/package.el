@@ -62,6 +62,12 @@
   :ensure ivy)
 (ivy-mode 1)
 
+(use-package company
+  :ensure company)
+
+(use-package tide
+  :ensure t
+  :after (typescript-mode company flycheck))
 
 ;; (use-package
 ;;   :ensure )

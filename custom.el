@@ -15,7 +15,7 @@
  '(js2-strict-missing-semi-warning nil)
  '(package-selected-packages
    (quote
-    (zop-to-char yaml-mode ivy json-mode markdown-mode xref-js2 zenburn-theme which-key volatile-highlights vkill use-package undo-tree smartrep smartparens smart-mode-line projectile ov operate-on-number neotree move-text magit js2-refactor imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region exec-path-from-shell editorconfig easy-kill discover-my-major diff-hl crux browse-kill-ring beacon anzu ace-window)))
+    (dockerfile-mode php-mode zop-to-char yaml-mode ivy json-mode markdown-mode xref-js2 zenburn-theme which-key volatile-highlights vkill use-package undo-tree smartrep smartparens smart-mode-line projectile ov operate-on-number neotree move-text magit js2-refactor imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region exec-path-from-shell editorconfig easy-kill discover-my-major diff-hl crux browse-kill-ring beacon anzu ace-window)))
  '(safe-local-variable-values (quote ((flycheck-disabled-checkers emacs-lisp-checkdoc))))
  '(tab-width indent-val))
 
