@@ -63,7 +63,9 @@
 (ivy-mode 1)
 
 (use-package company
-  :ensure company)
+  :ensure company
+  :init (global-company-mode))
+(require 'company)
 
 (use-package tide
   :ensure t
