@@ -27,8 +27,8 @@
 (global-set-key (kbd "H-n") 'neotree-change-root)
 
 (global-set-key (kbd "H-c") 'scroll-lock-mode)
-(global-set-key (kbd "H-k") 'kill-buffer)
-(global-set-key (kbd "H-f") 'find-file)
+(global-set-key (kbd "H-k") 'kill-this-buffer)
+;;(global-set-key (kbd "H-f") 'find-file)
 
 ;; move the cursor to the pane -- HIGHLY DISCOURAGED EVERYWHERE
 ;;(global-set-key (kbd "H-right") 'windmove-right)
